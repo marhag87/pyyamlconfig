@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 setup(name='pyyamlconfig',
       author='marhag87',
       url='https://github.com/marhag87/pyyamlconfig',
-      version='0.1.3',
+      version='0.1.4',
       packages=['pyyamlconfig'],
       license='WTFPL',
       description='Load configuration file in yaml format',
