@@ -15,7 +15,6 @@ setup(name='pyyamlconfig',
       classifiers=[
           'Development Status :: 4 - Beta',
           'Intended Audience :: Developers',
-          'License :: WTFPL',
           'Programming Language :: Python :: 3',
       ],
      )
