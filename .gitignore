@@ -1,3 +1,4 @@
 *.swp
 *.pyc
 pyyamlconfig.egg-info
+dist
