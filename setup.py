@@ -4,6 +4,7 @@ from setuptools import setup, find_packages
 
 setup(name='pyyamlconfig',
       author='marhag87',
+      author_email='marhag87@gmail.com',
       url='https://github.com/marhag87/pyyamlconfig',
       version='0.1.10',
       packages=find_packages(),
