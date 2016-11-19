@@ -3,3 +3,4 @@
 pyyamlconfig.egg-info
 dist
 .idea
+tests/written_config.yaml

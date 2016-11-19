@@ -1,10 +1,12 @@
 """
 Integration tests for pyyamlconfig
 """
+import os
 import unittest
 # pylint: disable=import-error
 from pyyamlconfig import (
     load_config,
+    write_config,
     PyYAMLConfigError,
 )
 
@@ -46,3 +48,28 @@ class TestLoadConfig(unittest.TestCase):
             str(err.exception),
             'Could not parse config file: faulty_config.yaml',
         )
+
+
+class TestWriteConfig(unittest.TestCase):
+    """
+    Tests for pyyamlconfig.load_config
+    """
+    def test_writes_config(self):
+        """
+        Test that config can be written
+        """
+        try:
+            os.remove('written_config.yaml')
+        except FileNotFoundError:
+            pass
+
+        write_config(
+            'written_config.yaml',
+            {'mywrittenkey': 'mywrittenvalue'}
+        )
+
+        with open('written_config.yaml') as file:
+            self.assertEqual(
+                file.read(),
+                'mywrittenkey: mywrittenvalue\n',
+            )

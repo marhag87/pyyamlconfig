@@ -30,3 +30,15 @@ def load_config(configfile):
         raise PyYAMLConfigError(
             'Could not open config file: {}'.format(configfile),
         )
+
+
+def write_config(configfile, content):
+    """
+    Write dict to a file in yaml format
+    """
+    with open(configfile, 'w+') as ymlfile:
+        yaml.dump(
+            content,
+            ymlfile,
+            default_flow_style=False,
+        )
