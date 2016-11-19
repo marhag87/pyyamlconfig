@@ -1,1 +1,7 @@
-from .load_config import load_config
+"""
+Module for handing config files in YAML
+"""
+from pyyamlconfig.pyyamlconfig import (
+    load_config,
+    PyYAMLConfigError,
+)

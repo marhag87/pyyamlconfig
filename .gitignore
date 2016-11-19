@@ -2,3 +2,4 @@
 *.pyc
 pyyamlconfig.egg-info
 dist
+.idea
