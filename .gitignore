@@ -3,3 +3,4 @@
 dist
 .idea
 tests/written_config.yaml
+.eggs

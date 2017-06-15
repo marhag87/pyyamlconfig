@@ -19,7 +19,7 @@ class TestLoadConfig(unittest.TestCase):
         """
         Tests that config can be loaded
         """
-        config = load_config('config.yaml')
+        config = load_config('tests/config.yaml')
         self.assertEqual(
             config,
             {'mykey': 'myvalue'},
@@ -30,11 +30,11 @@ class TestLoadConfig(unittest.TestCase):
         Test that it raises if file is not found
         """
         with self.assertRaises(PyYAMLConfigError) as err:
-            load_config('myconfig.yaml')
+            load_config('tests/myconfig.yaml')
 
         self.assertEqual(
             str(err.exception),
-            'Could not open config file: myconfig.yaml',
+            'Could not open config file: tests/myconfig.yaml',
         )
 
     def test_raises_parse_error(self):
@@ -42,11 +42,11 @@ class TestLoadConfig(unittest.TestCase):
         Test that it raises if file can't be parsed
         """
         with self.assertRaises(PyYAMLConfigError) as err:
-            load_config('faulty_config.yaml')
+            load_config('tests/faulty_config.yaml')
 
         self.assertEqual(
             str(err.exception),
-            'Could not parse config file: faulty_config.yaml',
+            'Could not parse config file: tests/faulty_config.yaml',
         )
 
 
@@ -59,16 +59,16 @@ class TestWriteConfig(unittest.TestCase):
         Test that config can be written
         """
         try:
-            os.remove('written_config.yaml')
+            os.remove('tests/written_config.yaml')
         except FileNotFoundError:
             pass
 
         write_config(
-            'written_config.yaml',
+            'tests/written_config.yaml',
             {'mywrittenkey': 'mywrittenvalue'}
         )
 
-        with open('written_config.yaml') as file:
+        with open('tests/written_config.yaml') as file:
             self.assertEqual(
                 file.read(),
                 'mywrittenkey: mywrittenvalue\n',

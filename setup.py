@@ -23,4 +23,6 @@ setup(
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3',
     ],
+    test_suite='nose.collector',
+    tests_require=['nose'],
 )
