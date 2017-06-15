@@ -17,7 +17,7 @@ setup(
     license='WTFPL',
     description='Load configuration file in yaml format',
     long_description='Load configuration file in yaml formaẗ́',
-    install_requires=['pyyaml'],
+    install_requires=['PyYAML'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
