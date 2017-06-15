@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: pyyamlconfig
-Version: 0.2.2
+Version: 0.2.3
 Summary: Load configuration file in yaml format
 Home-page: https://github.com/marhag87/pyyamlconfig
 Author: marhag87

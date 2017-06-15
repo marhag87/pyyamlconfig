@@ -12,7 +12,7 @@ setup(
     author='marhag87',
     author_email='marhag87@gmail.com',
     url='https://github.com/marhag87/pyyamlconfig',
-    version='0.2.2',
+    version='0.2.3',
     packages=find_packages(),
     license='WTFPL',
     description='Load configuration file in yaml format',
