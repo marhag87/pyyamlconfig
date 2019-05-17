@@ -20,7 +20,7 @@ def load_config(configfile):
     try:
         with open(configfile, 'r') as ymlfile:
             try:
-                config = yaml.load(ymlfile)
+                config = yaml.full_load(ymlfile)
                 return config
             except yaml.parser.ParserError:
                 raise PyYAMLConfigError(
